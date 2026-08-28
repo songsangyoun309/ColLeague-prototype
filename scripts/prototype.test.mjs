@@ -87,6 +87,16 @@ test("ability tooltips retain useful details without redundant source captions",
   assert.doesNotMatch(css, /\.community-consensus \.advice-prose (?:strong|b)\s*[,\{]/);
 });
 
+test("items use short leading stages and rune paths keep paired icon-label tracks", () => {
+  const component = read("components/ItemTable.tsx");
+  for (const label of ["Starter", "Item 1", "Boots", "Item 2"]) assert.ok(component.includes(label));
+  assert.match(component, /className="item-stage"/);
+  assert.doesNotMatch(component, /Starting items|First completed item|Second completed item/);
+  const css = read("app/globals.css");
+  assert.match(css, /grid-template-columns: 28px minmax\(0, max-content\)/);
+  assert.match(css, /\.dashboard-runes \.rune-path \+ \.rune-path::before/);
+});
+
 test("served routes stay locked and expose a healthy standalone demo", { skip: !process.env.PROTOTYPE_URL }, async () => {
   const base = process.env.PROTOTYPE_URL;
   for (const route of ["/", "/pantheon/vs/darius", "/?lane=middle&champion=ahri&opponent=mel"]) {

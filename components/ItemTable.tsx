@@ -2,11 +2,11 @@ import type { BonusItem, Item } from "@/lib/types";
 import { itemIconUrl } from "@/lib/game-data";
 
 const stageNames: Record<string, string> = {
-  starting: "Starting items",
+  starting: "Starter",
   boots: "Boots",
-  first_completed: "First completed item",
-  second_completed: "Second completed item",
-  component: "Early components",
+  first_completed: "Item 1",
+  second_completed: "Item 2",
+  component: "Parts",
 };
 
 export function ItemTable({ items, bonusItems = [], compact = false }: { items: Item[]; bonusItems?: BonusItem[]; compact?: boolean }) {
@@ -18,13 +18,14 @@ export function ItemTable({ items, bonusItems = [], compact = false }: { items: 
   return (
     <div className="item-table">
       <div className="item-row item-head">
-        <span>Choice</span><span>Sample</span><span>{rateLabel}</span><span>Raw WR</span>
+        <span aria-hidden="true" /><span className="item-choice-heading">Choice</span><span>Sample</span><span>{rateLabel}</span><span>Raw WR</span>
       </div>
       {visible.map((item) => (
         <div className="item-row" key={item.id}>
+          <span className="item-stage">{stageNames[item.stage] ?? item.stage}</span>
           <span className="item-name">
             <img src={itemIconUrl(item.item_id)} alt={`${item.name} icon`} title={item.name} />
-            <span><b>{item.name}</b><small>{stageNames[item.stage] ?? item.stage}</small></span>
+            <span><b>{item.name}</b></span>
           </span>
           {item.data_status === "historical_guide" ? (
             <>

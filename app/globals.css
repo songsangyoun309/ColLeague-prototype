@@ -343,7 +343,7 @@ h1 em { color: var(--gold); font-weight: 400; }
 .card-foot { display: flex; justify-content: space-between; color: var(--faint); font-size: 8px; margin-top: 8px; }
 .low-sample { color: var(--amber); text-transform: uppercase; }
 .item-table { border: 1px solid var(--line); }
-.item-row { display: grid; grid-template-columns: 2fr repeat(3, .7fr); align-items: center; min-height: 62px; border-bottom: 1px solid var(--line-soft); padding: 0 17px; font-size: 10px; }
+.item-row { display: grid; grid-template-columns: 44px 2fr repeat(3, .7fr); align-items: center; min-height: 62px; border-bottom: 1px solid var(--line-soft); padding: 0 17px; font-size: 10px; }
 .item-row:last-child { border-bottom: 0; }
 .item-head { min-height: 34px; color: var(--faint); background: #111513; text-transform: uppercase; letter-spacing: .08em; font-size: 8px; }
 .item-name { display: flex; align-items: center; gap: 11px; }
@@ -466,7 +466,7 @@ h1 em { color: var(--gold); font-weight: 400; }
   .item-head { display: none; }
   .item-row { grid-template-columns: 1fr 1fr; gap: 10px; padding: 13px; }
   .item-name { grid-column: 1/-1; }
-  .item-row > span:not(.item-name)::before { content: attr(data-label) " "; color: var(--faint); font-size: 8px; }
+  .item-row > span[data-label]::before { content: attr(data-label) " "; color: var(--faint); font-size: 8px; }
   .champ-select-shell { padding: 40px 18px 70px; }
   .quick-config { flex-direction: column; align-items: stretch; gap: 25px; }
   .quick-config label { width: 100%; }
@@ -3401,9 +3401,7 @@ h1 em { color: var(--gold); font-weight: 400; }
   z-index: 3;
   overflow: visible;
   border-right: 1px solid rgba(78, 113, 132, .45);
-  background:
-    radial-gradient(circle at 50% 0, rgba(28, 80, 104, .2), transparent 22rem),
-    rgba(4, 17, 27, .94);
+  background: transparent;
 }
 
 .dashboard-matchup {
@@ -3994,11 +3992,15 @@ h1 em { color: var(--gold); font-weight: 400; }
 }
 
 .dashboard-runes .rune-paths > div {
-  display: flex;
+  display: grid;
+  grid-template-columns: 28px minmax(0, max-content);
+  justify-content: center;
+  align-content: start;
+  position: relative;
   min-width: 0;
   flex-direction: column;
   align-items: stretch;
-  gap: 11px;
+  gap: 11px 7px;
   padding: 12px 0;
   border-right: 0;
   border-bottom: 0;
@@ -4015,6 +4017,15 @@ h1 em { color: var(--gold); font-weight: 400; }
   border-right: 0;
 }
 
+.dashboard-runes .rune-path + .rune-path::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: -7px;
+  border-left: 1px solid var(--line);
+}
+
 .dashboard-runes .rune-path > span {
   color: var(--faint);
   font-size: 10px;
@@ -4027,7 +4038,9 @@ h1 em { color: var(--gold); font-weight: 400; }
 }
 
 .rune-picks {
-  display: flex;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
   flex-direction: column;
   align-items: stretch;
   gap: 8px;
@@ -4036,7 +4049,8 @@ h1 em { color: var(--gold); font-weight: 400; }
 .rune-pick,
 .dashboard-runes .rune-path > span {
   display: grid;
-  grid-template-columns: 28px minmax(0, 1fr);
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
   width: 100%;
   min-width: 0;
   align-items: center;
@@ -4045,7 +4059,7 @@ h1 em { color: var(--gold); font-weight: 400; }
 
 /* Headings share the labels' text track, leaving the icon track empty. */
 .dashboard-runes .rune-path > span::before,
-.dashboard-items .item-head > span:first-child::before {
+.dashboard-items .item-choice-heading::before {
   content: "";
 }
 
@@ -4144,9 +4158,9 @@ h1 em { color: var(--gold); font-weight: 400; }
 
 .dashboard-items .item-row {
   min-height: 62px;
-  grid-template-columns: minmax(0, 1.8fr) repeat(3, minmax(0, 1fr));
-  column-gap: 12px;
-  padding: 10px 20px;
+  grid-template-columns: 44px minmax(0, 2.4fr) repeat(3, minmax(0, 1fr));
+  column-gap: 8px;
+  padding: 10px 14px;
   border-bottom-color: var(--line-soft);
   color: var(--ink);
   font-size: 12px;
@@ -4154,9 +4168,13 @@ h1 em { color: var(--gold); font-weight: 400; }
   text-align: center;
 }
 
-.dashboard-items .item-row > span:nth-child(n + 2) {
+.dashboard-items .item-row > span[data-label] {
   text-align: center;
   white-space: nowrap;
+}
+
+.dashboard-items .item-row > span[data-label]::before {
+  content: none;
 }
 
 .dashboard-items .item-row em {
@@ -4165,6 +4183,7 @@ h1 em { color: var(--gold); font-weight: 400; }
 }
 
 .dashboard-items .item-head {
+  display: grid;
   min-height: 48px;
   background: rgba(5, 20, 30, .52);
   color: var(--faint);
@@ -4180,11 +4199,13 @@ h1 em { color: var(--gold); font-weight: 400; }
 }
 
 .dashboard-items .item-name,
-.dashboard-items .item-head > span:first-child {
+.dashboard-items .item-choice-heading {
   display: grid;
-  grid-template-columns: 40px minmax(0, 1fr);
+  grid-column: auto;
+  grid-template-columns: 36px minmax(0, 1fr);
   min-width: 0;
-  gap: 12px;
+  gap: 8px;
+  white-space: normal;
 }
 
 .dashboard-items .item-name > span {
@@ -4193,8 +4214,8 @@ h1 em { color: var(--gold); font-weight: 400; }
 }
 
 .dashboard-items .item-name > img {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   flex: 0 0 auto;
   border-color: rgba(200, 155, 60, .55);
   border-radius: 5px;
@@ -4251,10 +4272,16 @@ h1 em { color: var(--gold); font-weight: 400; }
 
 .bonus-item b { font-weight: 650; }
 
-.dashboard-items .item-name small {
+.dashboard-items .item-stage {
+  align-self: stretch;
+  display: grid;
+  place-content: center;
+  padding-right: 8px;
+  border-right: 1px solid var(--line-soft);
   color: var(--faint);
-  font-size: 9px;
-  letter-spacing: .025em;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .dashboard-items .table-note {
@@ -4501,6 +4528,8 @@ h1 em { color: var(--gold); font-weight: 400; }
   }
 
   .dashboard-runes .rune-paths > div {
+    display: flex;
+    justify-content: flex-start;
     gap: 9px;
     padding: 11px 0;
   }
@@ -4528,6 +4557,10 @@ h1 em { color: var(--gold); font-weight: 400; }
     grid-template-columns: minmax(0, 1fr);
     justify-items: center;
     gap: 5px;
+  }
+
+  .dashboard-runes .rune-picks {
+    display: flex;
   }
 
   .dashboard-runes .rune-path > span {
@@ -4560,22 +4593,27 @@ h1 em { color: var(--gold); font-weight: 400; }
   .dashboard-items .item-row {
     min-height: 92px;
     padding: 13px 14px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 44px repeat(3, minmax(0, 1fr));
     gap: 10px;
   }
 
   .dashboard-items .item-name {
-    grid-column: 1 / -1;
+    grid-column: 2 / -1;
   }
 
-  .dashboard-items .item-row > span:not(.item-name) {
+  .dashboard-items .item-stage {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .dashboard-items .item-row > span[data-label] {
     display: flex;
     flex-direction: column;
     gap: 3px;
     text-align: center;
   }
 
-  .dashboard-items .item-row > span:not(.item-name)::before {
+  .dashboard-items .item-row > span[data-label]::before {
     content: attr(data-label);
     color: var(--faint);
     font-size: 9px;
