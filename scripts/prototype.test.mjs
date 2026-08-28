@@ -29,6 +29,11 @@ test("the page is fixed, labels all placeholders, and retains the comparison", (
   assert.match(page, /<AbilityComparison playerName="Pantheon"/);
   assert.match(page, /opponentName="Darius"/);
   assert.doesNotMatch(page, /StudyMatchupSwitcher|searchParams|Last 30 days|<select/);
+  assert.match(page, /<header className="dashboard-context">/);
+  assert.match(page, /<h1>Pantheon vs Darius<\/h1>/);
+  const css = read("app/globals.css");
+  assert.match(css, /width: min\(1180px, 100%\)/);
+  assert.match(css, /\.dashboard-runes \.rune-stats \{\s*margin-top: 16px;\s*padding-top: 0;[\s\S]*?border-top: 0;/);
 });
 
 test("nine fictional tips have distinct demo citations and matching source previews", () => {

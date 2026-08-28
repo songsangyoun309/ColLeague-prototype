@@ -28,7 +28,7 @@ export default function PrototypePage() {
   return (
     <main className="study-dashboard-page">
       <div className="study-dashboard-shell">
-        <aside className="dashboard-context">
+        <header className="dashboard-context">
           <div className="dashboard-matchup">
             <span className="prototype-lane">Top lane · Fixed matchup</span>
             <div className="prototype-portraits" aria-label="Pantheon versus Darius">
@@ -36,10 +36,9 @@ export default function PrototypePage() {
               <span>vs</span>
               <img src={portrait("Darius")} alt="Darius" />
             </div>
-            <span className="eyebrow">Pantheon Top</span>
-            <h1>vs Darius</h1>
+            <h1>Pantheon vs Darius</h1>
           </div>
-        </aside>
+        </header>
         <section className="dashboard-main">
           <div className="unified-dashboard">
             <div className="prototype-notice" role="note">
