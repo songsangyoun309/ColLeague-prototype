@@ -8,15 +8,21 @@
       "advice": [
         {
           "id": "short-trades",
-          "text": "Poke with Pantheon's Q as Darius walks up for a last hit. Keep the trade short and leave yourself room to retreat.",
+          "text": "Tap Pantheon's Q as Darius commits to a last hit, then step back before he can answer with attacks. Chip away at his health over separate trades. Save Pantheon's W for an opening; jumping onto a healthy Darius gives him a chance to extend the fight.",
           "source_title": "Finding a short trading window",
-          "source_excerpt": "I would look for a quick spear poke while Darius is occupied with a minion, then back out. Chasing the trade makes it harder to leave on your terms."
+          "source_excerpt": "I would start with spear pokes while he farms and check whether I can leave without taking a return trade. After landing one, I would reset my position. I would want a health lead before using the stun to commit."
         },
         {
           "id": "hold-stun",
-          "text": "Hold Pantheon's W until Darius misses his E. Take your damage window, then reset the spacing before he can answer.",
-          "source_title": "Saving the stun for an opening",
-          "source_excerpt": "Let the pull miss before you commit your stun. After the short combo, make space again instead of staying for another round of attacks."
+          "text": "During Darius's Q windup, Pantheon's W can bring you inside the axe blade. Use that response only if you can leave afterward. If Darius's E is still available and he has a long lane to chase through, walking out of the swing is safer than jumping in.",
+          "source_title": "Using the stun to avoid the axe blade",
+          "source_excerpt": "The jump can put you close enough to avoid the damaging outer blade, but you still need an exit. I would check whether his pull is available and how far I am from my turret before choosing to jump toward him."
+        },
+        {
+          "id": "shield-response",
+          "text": "Face Darius with Pantheon's E while backing away from his return damage. The shield does not stop Darius's E from pulling you back. After spending the shield, keep your distance until it returns instead of starting another stun combo without protection.",
+          "source_title": "Saving the shield for the return trade",
+          "source_excerpt": "I would keep the shield for his response, facing him as I leave. Blocking damage does not remove the risk of being pulled back. If I have used both the stun and shield, I would wait for those tools before trading again."
         }
       ]
     },
@@ -26,15 +32,21 @@
       "advice": [
         {
           "id": "respect-range",
-          "text": "Step out of the outer edge of Darius's Q. Give up a last hit if taking it would leave you in range of his E.",
+          "text": "Farm on your side of the lane when you can, with room to retreat toward your turret. Give up a contested last hit if it puts you in range of Darius's E and a long chase. Stand outside the pull's reach even when you have minions in front of you.",
           "source_title": "Choosing which last hits to contest",
-          "source_excerpt": "A minion is not worth losing a large chunk of health. Keep an exit path and watch the edge of the axe swing before walking forward."
+          "source_excerpt": "I would rather lose one minion than get pulled away from a safe position. A wave near my turret gives me a shorter retreat. Standing behind my minions would not protect me from the pull."
         },
         {
           "id": "reset-stacks",
-          "text": "Back away after a short trade. Let Darius's bleed stacks expire before you approach for another last hit.",
+          "text": "Let the bleed stacks from Darius's P expire before you trade again. At five stacks he gains a large attack-damage boost, so another attack can cost more than the last one. If he reaches five stacks, focus on escaping rather than answering with one more hit.",
           "source_title": "Resetting between trades",
-          "source_excerpt": "Do not turn two small trades into one long fight. Take enough time between them to let the bleed stacks fall off."
+          "source_excerpt": "I would watch my bleed stacks as well as my health bar. Going back in before they expire lets him continue the same fight. At maximum stacks, I would use my escape tools instead of trying to finish a short exchange."
+        },
+        {
+          "id": "deny-axe-heal",
+          "text": "Watch the windup of Darius's Q and move beyond the blade if you have space. If you are already next to him, stepping toward the handle avoids the outer hit and its heal. Move away after the swing; staying close lets him follow with Darius's W.",
+          "source_title": "Avoiding the outer swing and heal",
+          "source_excerpt": "I would choose my direction before the axe finishes swinging. From a distance I would leave its range; from close up I would aim for the handle. Once the swing ends, I would make room again before his slowing attack."
         }
       ]
     },
@@ -44,15 +56,21 @@
       "advice": [
         {
           "id": "plan-empowerment",
-          "text": "Plan around your empowered ability before you trade. Use Pantheon's Q to poke, then rebuild your passive stacks before committing.",
+          "text": "Check Pantheon's P stacks before stepping up and choose which spell you want to empower. Spend the empowerment on Pantheon's Q for poke when you cannot stay in range. Save it for Pantheon's W when you have room to follow the stun with attacks, then plan your next empowered cast.",
           "source_title": "Planning the next empowered cast",
-          "source_excerpt": "Check your passive stacks before stepping forward. Decide which ability you want to empower rather than spending the next cast without a plan."
+          "source_excerpt": "I would decide whether I want a poke or a stun-led trade before spending the empowered cast. For a brief opening, I would use the spear. With a safe follow-up, I would consider the stun and attacks, then check my stacks again."
         },
         {
           "id": "keep-exit",
-          "text": "Keep Pantheon's E available when you step forward. Push the wave before looking for a roam so you do not give away a free wave.",
-          "source_title": "Keeping an exit and preparing a roam",
-          "source_excerpt": "Keep the shield ready for the opponent's response. Before leaving lane, think about where the next wave will meet and what you will miss while away."
+          "text": "Keep enough mana for Pantheon's E when you commit with Pantheon's W. A spear poke costs less than a full combo, so use Pantheon's Q between openings instead of spending your escape budget on repeated all-ins. Back off if you cannot afford the shield afterward.",
+          "source_title": "Budgeting mana for the way out",
+          "source_excerpt": "Before jumping in, I would check that I can pay for the shield as well as my damage. I would use spear pokes to conserve mana between larger trades. Having the stun available would not be enough reason to engage if I could not protect the retreat."
+        },
+        {
+          "id": "prepare-roam",
+          "text": "Push the wave into the enemy turret before looking for a roam with Pantheon's R. Check where your teammates can follow up and leave yourself a route back to lane. If no play develops, return for the next wave instead of waiting out of vision while minions die.",
+          "source_title": "Preparing the wave before a roam",
+          "source_excerpt": "I would look at the wave before looking for an ultimate. After pushing it in, I would check for a fight my teammates can reach. If the opening disappears, I would head back rather than keep waiting and lose the next wave."
         }
       ]
     }

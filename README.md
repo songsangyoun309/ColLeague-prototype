@@ -5,7 +5,7 @@ A standalone application demo of Coleague, locked to **Pantheon vs Darius, top l
 ## What is real, and what is a placeholder?
 
 - **Sample data:** all win rates, game counts, item/rune statistics, the matchup rating, and build choices are invented UI examples. They are labeled in the interface and are not gameplay recommendations.
-- **Fictional sample advice:** the three advice sections contain six authored example tips with ability icons. Numbered demo citations open `/demo-sources` and jump to a matching fictional excerpt. These demonstrate the reading flow, not reviewed community recommendations; no excerpts or links claim to represent real discussions.
+- **Fictional sample advice:** the three advice sections contain nine authored example tips covering trading windows, ability interactions, spacing, mana, and roams, with ability icons. Numbered demo citations open `/demo-sources` and jump to a matching fictional excerpt. These demonstrate the reading flow, not reviewed community recommendations; no excerpts or links claim to represent real discussions.
 - **Official static reference:** Pantheon and Darius ability descriptions, icons, and base cooldowns use a bundled Riot Data Dragon 16.15.1 snapshot. This is not live gameplay data; ability haste, resets, and recasts are not applied. Icons load from Riot's CDN. Fonts are bundled locally with their licenses.
 - **Replay placeholder:** no third-party video is embedded in this demo.
 

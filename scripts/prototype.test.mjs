@@ -31,13 +31,13 @@ test("the page is fixed, labels all placeholders, and retains the comparison", (
   assert.doesNotMatch(page, /StudyMatchupSwitcher|searchParams|Last 30 days|<select/);
 });
 
-test("six fictional tips have distinct demo citations and matching source previews", () => {
+test("nine fictional tips have distinct demo citations and matching source previews", () => {
   const advice = JSON.parse(read("data/sample-advice.json"));
   assert.equal(advice.data_status, "fictional_demo");
   assert.equal(advice.sections.length, 3);
   const tips = advice.sections.flatMap(section => section.advice);
-  assert.equal(tips.length, 6);
-  assert.equal(new Set(tips.map(tip => tip.id)).size, 6);
+  assert.equal(tips.length, 9);
+  assert.equal(new Set(tips.map(tip => tip.id)).size, 9);
   for (const tip of tips) {
     assert.match(tip.id, /^[a-z-]+$/);
     assert.ok(tip.text.length > 50 && tip.source_excerpt.length > 50 && tip.source_title);
@@ -82,7 +82,16 @@ test("served routes stay locked and expose a healthy standalone demo", { skip: !
     assert.match(html, /Prototype · Sample data/);
     assert.match(html, /Matchup Advice as Pantheon/);
     assert.match(html, /General advice against Darius/);
-    assert.equal((html.match(/aria-label="Demo source /g) ?? []).length, 6);
+    assert.equal((html.match(/aria-label="Demo source /g) ?? []).length, 9);
+    const kits = JSON.parse(read("data/abilities.json")).champions;
+    for (const section of JSON.parse(read("data/sample-advice.json")).sections) {
+      const sectionHtml = html.split(`id="${section.id}"`)[1].split("</section>")[0];
+      const expectedIcons = section.advice.flatMap(tip =>
+        [...tip.text.matchAll(/\b(Pantheon|Darius)'s ([PQWER])\b/g)].map(([, champion, key]) =>
+          `${champion} ${kits[champion][key].name}`));
+      const renderedIcons = [...sectionHtml.matchAll(/aria-label="((?:Pantheon|Darius) [^"]+)"/g)].map(match => match[1]);
+      assert.deepEqual(renderedIcons, expectedIcons, `${section.id}: ability icon ownership`);
+    }
     assert.doesNotMatch(html, /lolalytics|reddit\.com|Last 30 days|Change champion|Change opponent|Swap lane/i);
   }
   assert.equal((await fetch(new URL("/ahri/vs/mel", base))).status, 404);
