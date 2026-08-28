@@ -12,8 +12,8 @@
   --green: #32c8a0;
   --amber: #d7a84b;
   --red: #d45b5b;
-  --player-tint: rgba(50, 200, 160, .045);
-  --opponent-tint: rgba(212, 91, 91, .055);
+  --player-tint: rgba(50, 200, 120, .09);
+  --opponent-tint: rgba(235, 70, 65, .12);
 }
 
 * { box-sizing: border-box; }
