@@ -42,6 +42,21 @@ export function RuneTable({ pages, summonerSpells, compact = false }: { pages: R
               {page.is_low_sample && <span className="low-sample">Low sample</span>}
             </div>
 
+            <div className="rune-paths">
+              <div className="rune-path"><span>Primary</span><RunePicks names={page.configuration.primary} label="Primary runes" /></div>
+              <div className="rune-path"><span>Secondary</span><RunePicks names={page.configuration.secondary} label="Secondary runes" /></div>
+              {!compact && <div className="rune-path"><span>Shards</span><RunePicks names={page.configuration.shards} label="Rune shards" shards /></div>}
+            </div>
+
+            {isGuide ? (
+              <p className="guide-data-note">Archived Patch {page.patch_range} recommendation</p>
+            ) : <dl className="rune-stats">
+              <div><dt>{isKeystoneStat ? "Keystone sample" : "Sample"}</dt><dd>{page.sample_size.toLocaleString()} games</dd></div>
+              <div><dt>{isDerivedShare ? "Matchup share" : "Pick rate"}</dt><dd>{page.pick_rate.toFixed(1)}%</dd></div>
+              <div><dt>{isKeystoneStat ? "Keystone WR" : "Raw WR"}</dt><dd>{page.raw_win_rate.toFixed(1)}%</dd></div>
+              <div><dt>Coverage</dt><dd>{page.rank_range} · {page.region}</dd></div>
+            </dl>}
+
             {summonerSpells && (
               <div className="summoner-spell-set">
                 <div>
@@ -66,20 +81,6 @@ export function RuneTable({ pages, summonerSpells, compact = false }: { pages: R
               </div>
             )}
 
-            <div className="rune-paths">
-              <div className="rune-path"><span>Primary</span><RunePicks names={page.configuration.primary} label="Primary runes" /></div>
-              <div className="rune-path"><span>Secondary</span><RunePicks names={page.configuration.secondary} label="Secondary runes" /></div>
-              {!compact && <div className="rune-path"><span>Shards</span><RunePicks names={page.configuration.shards} label="Rune shards" shards /></div>}
-            </div>
-
-            {isGuide ? (
-              <p className="guide-data-note">Archived Patch {page.patch_range} recommendation</p>
-            ) : <dl className="rune-stats">
-              <div><dt>{isKeystoneStat ? "Keystone sample" : "Sample"}</dt><dd>{page.sample_size.toLocaleString()} games</dd></div>
-              <div><dt>{isDerivedShare ? "Matchup share" : "Pick rate"}</dt><dd>{page.pick_rate.toFixed(1)}%</dd></div>
-              <div><dt>{isKeystoneStat ? "Keystone WR" : "Raw WR"}</dt><dd>{page.raw_win_rate.toFixed(1)}%</dd></div>
-              <div><dt>Coverage</dt><dd>{page.rank_range} · {page.region}</dd></div>
-            </dl>}
           </article>
         );
       })}

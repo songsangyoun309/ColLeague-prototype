@@ -82,6 +82,7 @@ test("served routes stay locked and expose a healthy standalone demo", { skip: !
     assert.match(html, /Prototype · Sample data/);
     assert.match(html, /Matchup Advice as Pantheon/);
     assert.match(html, /General advice against Darius/);
+    assert.match(html, /class="rune-card-header"[\s\S]*class="rune-paths"[\s\S]*class="rune-stats"[\s\S]*class="summoner-spell-set"/);
     assert.equal((html.match(/aria-label="Demo source /g) ?? []).length, 9);
     assert.match(html, /class="[^"]*general-consensus" id="opponent-advice"/);
     assert.match(html, /class="[^"]*champion-guide" id="champion-advice"/);

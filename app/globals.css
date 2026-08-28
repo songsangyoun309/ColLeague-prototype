@@ -3375,8 +3375,8 @@ h1 em { color: var(--gold); font-weight: 400; }
 /* Dashboard visual system: readable type, consistent surfaces, resilient layout. */
 .study-dashboard-page {
   --ink: #f2f5f4;
-  --muted: #b4c0c5;
-  --faint: #8498a3;
+  --muted: #d7e1e8;
+  --faint: #91a5b4;
   --line: #294858;
   --line-soft: #1c3747;
   color: var(--ink);
@@ -3867,6 +3867,7 @@ h1 em { color: var(--gold); font-weight: 400; }
 
 .dashboard-card > header h2,
 .dashboard-card > header h3 {
+  color: var(--ink);
   font-family: var(--font-display), sans-serif;
   font-size: 16px;
   font-weight: 600;
@@ -3937,12 +3938,11 @@ h1 em { color: var(--gold); font-weight: 400; }
 
 .summoner-spell-set {
   margin-top: 18px;
-  padding: 13px 0;
+  padding: 13px 0 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 6px 14px;
   border-top: 1px solid var(--line-soft);
-  border-bottom: 1px solid var(--line-soft);
 }
 
 .summoner-spell-set > div,
@@ -3971,7 +3971,7 @@ h1 em { color: var(--gold); font-weight: 400; }
 }
 
 .summoner-spell-icons { justify-content: center; min-height: 50px; gap: 8px 12px; margin-top: 0; flex-wrap: wrap; }
-.summoner-spell-icons > span { flex-direction: column; gap: 5px; color: #c7d2d6; font-size: 11px; line-height: 15px; }
+.summoner-spell-icons > span { flex-direction: column; gap: 5px; color: var(--muted); font-size: 11px; line-height: 15px; }
 .summoner-spell-icons img { width: 30px; height: 30px; border: 1px solid rgba(200, 155, 60, .55); border-radius: 5px; }
 .summoner-spell-set dl { display: contents; }
 .summoner-spell-set dl > div { min-width: 60px; }
@@ -4010,7 +4010,7 @@ h1 em { color: var(--gold); font-weight: 400; }
   border-right: 0;
 }
 
-.dashboard-runes .rune-paths span {
+.dashboard-runes .rune-path > span {
   color: var(--faint);
   font-size: 10px;
   font-weight: 650;
@@ -4080,7 +4080,7 @@ h1 em { color: var(--gold); font-weight: 400; }
 
 .rune-paths .rune-pick-name {
   min-width: 0;
-  color: #b9c8cf;
+  color: var(--muted);
   font-size: 11px;
   font-weight: 560;
   letter-spacing: 0;
@@ -4143,7 +4143,7 @@ h1 em { color: var(--gold); font-weight: 400; }
   column-gap: 12px;
   padding: 10px 20px;
   border-bottom-color: var(--line-soft);
-  color: var(--muted);
+  color: var(--ink);
   font-size: 12px;
   font-variant-numeric: tabular-nums;
   text-align: center;
@@ -4196,7 +4196,7 @@ h1 em { color: var(--gold); font-weight: 400; }
 }
 
 .dashboard-items .item-name b {
-  color: var(--ink);
+  color: var(--muted);
   font-size: 12px;
   font-weight: 600;
 }
@@ -4233,7 +4233,7 @@ h1 em { color: var(--gold); font-weight: 400; }
   border: 1px solid rgba(66, 103, 122, .62);
   border-radius: 6px;
   background: rgba(13, 43, 58, .72);
-  color: #cdd7d9;
+  color: var(--muted);
   font-size: 10px;
 }
 
