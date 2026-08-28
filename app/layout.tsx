@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import "./prototype.css";
 
-const manrope = localFont({ src: "./fonts/manrope-latin-variable.woff2", variable: "--font-body", weight: "400 800", display: "swap" });
+const sourceSans = localFont({ src: "./fonts/source-sans-3-variable.woff2", variable: "--font-body", weight: "200 900", display: "swap", fallback: ["Arial", "sans-serif"] });
 const chakraPetch = localFont({ src: "./fonts/chakra-petch-latin-600.woff2", variable: "--font-display", weight: "600", display: "swap" });
 const cinzel = localFont({ src: "./fonts/cinzel-bold-c.ttf", variable: "--font-brand", weight: "700", display: "swap" });
 
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${chakraPetch.variable} ${cinzel.variable}`}>
+    <html lang="en" className={`${sourceSans.variable} ${chakraPetch.variable} ${cinzel.variable}`}>
       <body>
         <header className="site-header">
           <Link href="/" className="brand" aria-label="Coleague prototype home">
