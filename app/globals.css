@@ -3899,7 +3899,7 @@ h1 em { color: var(--gold); font-weight: 400; }
 
 .dashboard-runes .rune-card-header {
   display: grid;
-  grid-template-columns: 48px minmax(0, auto);
+  grid-template-columns: 48px minmax(0, auto) 48px;
   align-items: center;
   justify-content: center;
   gap: 13px;
@@ -4028,13 +4028,20 @@ h1 em { color: var(--gold); font-weight: 400; }
   gap: 8px;
 }
 
-.rune-pick {
+.rune-pick,
+.dashboard-runes .rune-path > span {
   display: grid;
   grid-template-columns: 28px minmax(0, 1fr);
   width: 100%;
   min-width: 0;
   align-items: center;
   gap: 7px;
+}
+
+/* Headings share the labels' text track, leaving the icon track empty. */
+.dashboard-runes .rune-path > span::before,
+.dashboard-items .item-head > span:first-child::before {
+  content: "";
 }
 
 .rune-pick img,
@@ -4167,7 +4174,8 @@ h1 em { color: var(--gold); font-weight: 400; }
   overflow-wrap: normal;
 }
 
-.dashboard-items .item-name {
+.dashboard-items .item-name,
+.dashboard-items .item-head > span:first-child {
   display: grid;
   grid-template-columns: 40px minmax(0, 1fr);
   min-width: 0;
@@ -4517,6 +4525,14 @@ h1 em { color: var(--gold); font-weight: 400; }
     gap: 5px;
   }
 
+  .dashboard-runes .rune-path > span {
+    display: block;
+  }
+
+  .dashboard-runes .rune-path > span::before {
+    display: none;
+  }
+
   .dashboard-runes .rune-paths .rune-pick-name {
     min-height: 25px;
     letter-spacing: 0;
@@ -4591,6 +4607,14 @@ h1 em { color: var(--gold); font-weight: 400; }
   align-items: center;
   gap: 5px;
 }
+
+/* Balance the help icon so it does not pull the heading off center. */
+.stat-label::before {
+  content: "";
+  flex: 0 0 15px;
+}
+
+.stat-label > .info-tooltip { flex: 0 0 15px; }
 
 .matchup-rating-scale {
   padding: 9px 16px 0;
