@@ -82,6 +82,9 @@ test("ability tooltips retain useful details without redundant source captions",
   for (const field of ["description", "cooldown", "cost", "patch"]) {
     assert.ok(component.includes(`ability.${field}`));
   }
+  const css = read("app/globals.css");
+  assert.match(css, /\.ability-popover\s*\{\s*font-family: var\(--font-body\), sans-serif;/);
+  assert.doesNotMatch(css, /\.community-consensus \.advice-prose (?:strong|b)\s*[,\{]/);
 });
 
 test("served routes stay locked and expose a healthy standalone demo", { skip: !process.env.PROTOTYPE_URL }, async () => {
