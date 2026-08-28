@@ -30,6 +30,14 @@ button, input, select, textarea, code { font: inherit; }
 h1, h2, h3, h4, h5, h6 { font-family: var(--font-display), sans-serif; font-weight: 600; }
 button { color: inherit; }
 img { display: block; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
 
 .site-header {
   height: 70px;
@@ -2109,7 +2117,7 @@ h1 em { color: var(--gold); font-weight: 400; }
   box-shadow: 0 0 0 2px #06131e;
 }
 
-.dashboard-duel span {
+.dashboard-duel .duel-vs {
   color: var(--gold);
   font-size: 9px;
   font-weight: 800;
@@ -3387,7 +3395,7 @@ h1 em { color: var(--gold); font-weight: 400; }
 .dashboard-matchup {
   position: relative;
   width: 100%;
-  padding: 0;
+  padding: 26px 0 0;
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
@@ -3445,7 +3453,7 @@ h1 em { color: var(--gold); font-weight: 400; }
   box-shadow: 0 0 0 3px #06131e, 0 10px 24px rgba(0, 0, 0, .28);
 }
 
-.dashboard-duel span {
+.dashboard-duel .duel-vs {
   min-width: 28px;
   min-height: 28px;
   display: grid;
@@ -3572,6 +3580,20 @@ h1 em { color: var(--gold); font-weight: 400; }
   border-radius: 9px;
   background: transparent;
   cursor: pointer;
+}
+
+.portrait-picker-name {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .portrait-picker-trigger::after {
@@ -4374,7 +4396,7 @@ h1 em { color: var(--gold); font-weight: 400; }
   }
 
   .dashboard-matchup {
-    padding: 0;
+    padding: 26px 0 0;
     display: grid;
   }
 
@@ -4459,11 +4481,13 @@ h1 em { color: var(--gold); font-weight: 400; }
     border-radius: 7px;
   }
 
-  .dashboard-duel span {
+  .dashboard-duel .duel-vs {
     min-width: 23px;
     min-height: 23px;
     font-size: 8px;
   }
+
+  .portrait-picker-name { font-size: 11px; }
 
   .dashboard-matchup h1 {
     font-size: 22px;

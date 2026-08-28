@@ -32,11 +32,11 @@ export default function PrototypePage() {
           <div className="dashboard-matchup">
             <span className="prototype-lane">Top lane · Fixed matchup</span>
             <div className="prototype-portraits" aria-label="Pantheon versus Darius">
-              <img src={portrait("Pantheon")} alt="Pantheon" />
+              <div className="prototype-portrait"><span className="portrait-picker-name">Pantheon</span><img src={portrait("Pantheon")} alt="Pantheon" /></div>
               <span>vs</span>
-              <img src={portrait("Darius")} alt="Darius" />
+              <div className="prototype-portrait"><span className="portrait-picker-name">Darius</span><img src={portrait("Darius")} alt="Darius" /></div>
             </div>
-            <h1>Pantheon vs Darius</h1>
+            <h1 className="visually-hidden">Pantheon vs Darius</h1>
           </div>
         </header>
         <section className="dashboard-main">

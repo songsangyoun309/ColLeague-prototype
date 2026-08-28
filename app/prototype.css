@@ -4,6 +4,7 @@
   font-weight: 600;
 }
 .prototype-portraits { display: flex; align-items: center; gap: 14px; margin: 0; }
+.prototype-portrait { position: relative; }
 .prototype-portraits img { width: 64px; height: 64px; border: 1px solid var(--gold-bright); border-radius: 8px; }
 .prototype-portraits > span { font-size: 11px; color: var(--gold-bright); }
 .prototype-notice { padding: 16px 20px; border: 1px solid var(--line); border-radius: 12px; background: #0b2533; }
