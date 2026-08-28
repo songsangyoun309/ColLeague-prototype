@@ -54,6 +54,9 @@ test("paired cooldowns reserve shared number slots without changing the stored v
   assert.match(component, /--cooldown-value-width/);
   assert.match(component, /values.length === 1/);
   assert.match(read("app/globals.css"), /width: var\(--cooldown-value-width\)/);
+  assert.ok(read("app/globals.css").replaceAll("\r\n", "\n").includes(
+    '.ability-comparison-row[data-side="player"] .ability-comparison-cell {\n  grid-template-areas: "name" "icon" "cooldown";'
+  ));
   const abilities = JSON.parse(read("data/abilities.json")).champions;
   assert.equal(abilities.Pantheon.Q.cooldown, "11/10.25/9.5/8.75/8");
   assert.equal(abilities.Darius.W.cooldown, "5");

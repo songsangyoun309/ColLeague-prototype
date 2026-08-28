@@ -4915,6 +4915,11 @@ h1 em { color: var(--gold); font-weight: 400; }
   font-size: 12px;
 }
 
+.ability-comparison-row[data-side="player"] .ability-comparison-cell {
+  grid-template-areas: "name" "icon" "cooldown";
+  grid-template-rows: minmax(2.8em, 1fr) 48px minmax(36px, auto);
+}
+
 .ability-comparison-name {
   grid-area: name;
   font-family: var(--font-display), sans-serif;
