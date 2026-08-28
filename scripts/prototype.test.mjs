@@ -83,6 +83,11 @@ test("served routes stay locked and expose a healthy standalone demo", { skip: !
     assert.match(html, /Matchup Advice as Pantheon/);
     assert.match(html, /General advice against Darius/);
     assert.equal((html.match(/aria-label="Demo source /g) ?? []).length, 9);
+    assert.match(html, /class="[^"]*general-consensus" id="opponent-advice"/);
+    assert.match(html, /class="[^"]*champion-guide" id="champion-advice"/);
+    assert.doesNotMatch(html, /class="[^"]*(?:general-consensus|champion-guide)[^"]*" id="matchup-advice"/);
+    assert.match(html, /aria-label="Pantheon abilities" data-side="player"/);
+    assert.match(html, /aria-label="Darius abilities" data-side="opponent"/);
     const kits = JSON.parse(read("data/abilities.json")).champions;
     for (const section of JSON.parse(read("data/sample-advice.json")).sections) {
       const sectionHtml = html.split(`id="${section.id}"`)[1].split("</section>")[0];

@@ -12,6 +12,8 @@
   --green: #32c8a0;
   --amber: #d7a84b;
   --red: #d45b5b;
+  --player-tint: rgba(50, 200, 160, .045);
+  --opponent-tint: rgba(212, 91, 91, .055);
 }
 
 * { box-sizing: border-box; }
@@ -4257,21 +4259,21 @@ h1 em { color: var(--gold); font-weight: 400; }
   font-weight: 600;
 }
 
-.general-consensus {
-  border-color: #315d67;
+.general-consensus,
+.ability-comparison-row[data-side="opponent"] {
+  --side-tint: var(--opponent-tint);
 }
 
-.general-consensus > header {
-  background: rgba(33, 91, 99, .2);
+.champion-guide,
+.ability-comparison-row[data-side="player"] {
+  --side-tint: var(--player-tint);
 }
 
-.general-consensus .advice-card::marker {
-  color: #72c2bd;
-}
-
-.general-consensus .inline-citations a {
-  background: rgba(77, 155, 153, .12);
-  color: #87d2cd;
+.general-consensus,
+.champion-guide,
+.general-consensus > header,
+.champion-guide > header {
+  background-image: linear-gradient(var(--side-tint), var(--side-tint));
 }
 
 .community-consensus .advice-list {
@@ -4859,7 +4861,8 @@ h1 em { color: var(--gold); font-weight: 400; }
 }
 
 .ability-comparison-row > h3 {
-  align-self: center;
+  align-self: stretch;
+  align-content: center;
   min-width: 0;
   margin: 0;
   padding: 12px 8px;
@@ -4931,6 +4934,12 @@ h1 em { color: var(--gold); font-weight: 400; }
 
 .ability-comparison-cell > .ability-tooltip {
   grid-area: icon;
+}
+
+/* Paint the cells so the tint also follows each side on the mobile grid. */
+.ability-comparison-row > h3,
+.ability-comparison-cell {
+  background-color: var(--side-tint);
 }
 
 @media (min-width: 821px) {

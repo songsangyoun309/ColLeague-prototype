@@ -30,6 +30,7 @@ export function AbilityComparison({
       <div className="ability-comparison-grid">
         {champions.map(({ name, abilities, label }, side) => (
           <div className="ability-comparison-row" role="group" aria-label={`${name} abilities`}
+            data-side={side === 0 ? "player" : "opponent"}
             style={{ "--ability-side": side + 1 } as CSSProperties} key={label}>
             <h3><small>{label}</small>{name}</h3>
             {abilityKeys.map((key, index) => {

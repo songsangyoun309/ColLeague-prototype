@@ -86,7 +86,7 @@ export default function PrototypePage() {
             <AbilityComparison playerName="Pantheon" playerAbilities={Pantheon} opponentName="Darius" opponentAbilities={Darius} />
 
             {sampleAdvice.sections.map(section => (
-              <section className="dashboard-card dashboard-advice community-consensus" id={section.id} key={section.id}>
+              <section className={`dashboard-card dashboard-advice community-consensus ${section.id === "opponent-advice" ? "general-consensus" : section.id === "champion-advice" ? "champion-guide" : ""}`} id={section.id} key={section.id}>
                 <header><h2>{section.title}</h2></header>
                 <p className="prototype-advice-note">Sample advice · Fictional examples</p>
                 <ul className="advice-list">
