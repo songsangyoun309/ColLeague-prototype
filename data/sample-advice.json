@@ -1,0 +1,60 @@
+{
+  "data_status": "fictional_demo",
+  "notice": "Fictional advice and source excerpts for the interface demo. These are not reviewed community recommendations.",
+  "sections": [
+    {
+      "id": "matchup-advice",
+      "title": "Matchup Advice as Pantheon",
+      "advice": [
+        {
+          "id": "short-trades",
+          "text": "Poke with Pantheon's Q as Darius walks up for a last hit. Keep the trade short and leave yourself room to retreat.",
+          "source_title": "Finding a short trading window",
+          "source_excerpt": "I would look for a quick spear poke while Darius is occupied with a minion, then back out. Chasing the trade makes it harder to leave on your terms."
+        },
+        {
+          "id": "hold-stun",
+          "text": "Hold Pantheon's W until Darius misses his E. Take your damage window, then reset the spacing before he can answer.",
+          "source_title": "Saving the stun for an opening",
+          "source_excerpt": "Let the pull miss before you commit your stun. After the short combo, make space again instead of staying for another round of attacks."
+        }
+      ]
+    },
+    {
+      "id": "opponent-advice",
+      "title": "General advice against Darius",
+      "advice": [
+        {
+          "id": "respect-range",
+          "text": "Step out of the outer edge of Darius's Q. Give up a last hit if taking it would leave you in range of his E.",
+          "source_title": "Choosing which last hits to contest",
+          "source_excerpt": "A minion is not worth losing a large chunk of health. Keep an exit path and watch the edge of the axe swing before walking forward."
+        },
+        {
+          "id": "reset-stacks",
+          "text": "Back away after a short trade. Let Darius's bleed stacks expire before you approach for another last hit.",
+          "source_title": "Resetting between trades",
+          "source_excerpt": "Do not turn two small trades into one long fight. Take enough time between them to let the bleed stacks fall off."
+        }
+      ]
+    },
+    {
+      "id": "champion-advice",
+      "title": "General advice as Pantheon",
+      "advice": [
+        {
+          "id": "plan-empowerment",
+          "text": "Plan around your empowered ability before you trade. Use Pantheon's Q to poke, then rebuild your passive stacks before committing.",
+          "source_title": "Planning the next empowered cast",
+          "source_excerpt": "Check your passive stacks before stepping forward. Decide which ability you want to empower rather than spending the next cast without a plan."
+        },
+        {
+          "id": "keep-exit",
+          "text": "Keep Pantheon's E available when you step forward. Push the wave before looking for a roam so you do not give away a free wave.",
+          "source_title": "Keeping an exit and preparing a roam",
+          "source_excerpt": "Keep the shield ready for the opponent's response. Before leaving lane, think about where the next wave will meet and what you will miss while away."
+        }
+      ]
+    }
+  ]
+}

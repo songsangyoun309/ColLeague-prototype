@@ -1,10 +1,12 @@
+import Link from "next/link";
 import { AbilityComparison } from "@/components/AbilityComparison";
-import { AbilityIcon } from "@/components/AbilityIcon";
+import { AbilityText } from "@/components/AbilityText";
 import { InfoTooltip } from "@/components/InfoTooltip";
 import { RuneTable } from "@/components/RuneTable";
 import { ItemTable } from "@/components/ItemTable";
 import abilities from "@/data/abilities.json";
 import sample from "@/data/sample-build.json";
+import sampleAdvice from "@/data/sample-advice.json";
 import { DDRAGON_VERSION, type AbilityCatalog } from "@/lib/game-data";
 import type { RunePage, Item } from "@/lib/types";
 
@@ -42,7 +44,7 @@ export default function PrototypePage() {
           <div className="unified-dashboard">
             <div className="prototype-notice" role="note">
               <b>Prototype · Sample data</b>
-              <p>Statistics and build choices below are invented examples. Advice is placeholder content, not reviewed community guidance. No live statistics or community feeds are connected.</p>
+              <p>Statistics and build choices below are invented examples. Advice and citation previews are fictional examples, not reviewed community guidance. No live statistics or community feeds are connected.</p>
             </div>
             <section className="unified-section">
               <header className="unified-section-heading"><h2>Build &amp; runes</h2></header>
@@ -83,27 +85,26 @@ export default function PrototypePage() {
 
             <AbilityComparison playerName="Pantheon" playerAbilities={Pantheon} opponentName="Darius" opponentAbilities={Darius} />
 
-            <section className="dashboard-card dashboard-advice community-consensus">
-              <header><h2>Matchup Advice as Pantheon</h2></header>
-              <ul className="advice-list"><li className="advice-card"><p className="advice-prose">
-                <span className="placeholder-label">Placeholder advice</span>
-                This space will explain trading windows between Pantheon&apos;s <AbilityIcon ability={Pantheon.Q} fallbackKey="Q" size="small" /> and Darius&apos;s <AbilityIcon ability={Darius.Q} fallbackKey="Q" size="small" />. No matchup recommendation is supplied in this demo.
-              </p></li></ul>
-            </section>
-            <section className="dashboard-card dashboard-advice community-consensus general-consensus">
-              <header><h2>General advice against Darius</h2></header>
-              <ul className="advice-list"><li className="advice-card"><p className="advice-prose">
-                <span className="placeholder-label">Placeholder advice</span>
-                Opponent-focused guidance will appear here, with ability references such as Darius&apos;s <AbilityIcon ability={Darius.E} fallbackKey="E" size="small" />. Reviewed guidance and citations are not included in this prototype.
-              </p></li></ul>
-            </section>
-            <section className="dashboard-card dashboard-advice community-consensus champion-guide">
-              <header><h2>General advice as Pantheon</h2></header>
-              <ul className="advice-list"><li className="advice-card"><p className="advice-prose">
-                <span className="placeholder-label">Placeholder advice</span>
-                Champion fundamentals will appear here, with ability references such as Pantheon&apos;s <AbilityIcon ability={Pantheon.W} fallbackKey="W" size="small" />. This text demonstrates the layout, not a champion guide.
-              </p></li></ul>
-            </section>
+            {sampleAdvice.sections.map(section => (
+              <section className="dashboard-card dashboard-advice community-consensus" id={section.id} key={section.id}>
+                <header><h2>{section.title}</h2></header>
+                <p className="prototype-advice-note">Sample advice · Fictional examples</p>
+                <ul className="advice-list">
+                  {section.advice.map((advice, index) => (
+                    <li className="advice-card" key={advice.id}>
+                      <p className="advice-prose">
+                        <AbilityText text={advice.text} playerName="Pantheon" opponentName="Darius"
+                          playerAbilities={Pantheon} opponentAbilities={Darius} />
+                        <span className="inline-citations" aria-label="Demo citations">
+                          <Link href={`/demo-sources#${advice.id}`} title={`Fictional demo source: ${advice.source_title}`}
+                            aria-label={`Demo source ${index + 1}: ${advice.source_title} (fictional)`}>[{index + 1}]</Link>
+                        </span>
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
             <section className="dashboard-card unified-videos">
               <header><h2>Recent replay</h2></header>
               <p className="prototype-replay">Replay placeholder · No video is loaded in this demo.</p>

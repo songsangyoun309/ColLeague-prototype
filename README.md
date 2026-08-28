@@ -5,7 +5,7 @@ A standalone application demo of Coleague, locked to **Pantheon vs Darius, top l
 ## What is real, and what is a placeholder?
 
 - **Sample data:** all win rates, game counts, item/rune statistics, the matchup rating, and build choices are invented UI examples. They are labeled in the interface and are not gameplay recommendations.
-- **Placeholder advice:** the three advice sections demonstrate presentation only. No community posts, comments, quotations, summaries, or fabricated citations are included.
+- **Fictional sample advice:** the three advice sections contain six authored example tips with ability icons. Numbered demo citations open `/demo-sources` and jump to a matching fictional excerpt. These demonstrate the reading flow, not reviewed community recommendations; no excerpts or links claim to represent real discussions.
 - **Official static reference:** Pantheon and Darius ability descriptions, icons, and base cooldowns use a bundled Riot Data Dragon 16.15.1 snapshot. This is not live gameplay data; ability haste, resets, and recasts are not applied. Icons load from Riot's CDN. Fonts are bundled locally with their licenses.
 - **Replay placeholder:** no third-party video is embedded in this demo.
 
@@ -36,4 +36,4 @@ Create a **new service** connected to this repository. Use the repository root, 
 
 Describe this honestly as a fixed-matchup prototype with sample statistics and placeholder advice. It does not demonstrate an approved data connection. Riot's [developer policies](https://developer.riotgames.com/policies/general) and [Data Dragon documentation](https://developer.riotgames.com/docs/lol#data-dragon) apply to the official assets. Registration, review, and applicable permissions remain the owner's responsibility.
 
-Based on Coleague UI commit `acd21d7`; this repository has an independent history and does not include the main app's database or collectors.
+Based on Coleague UI commit `acd21d7`, with the shared-width cooldown alignment from `76bbb12`. This repository has an independent history and does not include the main app's database or collectors.

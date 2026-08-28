@@ -4901,6 +4901,7 @@ h1 em { color: var(--gold); font-weight: 400; }
 .ability-cooldown {
   grid-area: cooldown;
   align-self: start;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -4916,6 +4917,9 @@ h1 em { color: var(--gold); font-weight: 400; }
 }
 
 .ability-cooldown-rank b {
+  display: inline-block;
+  width: var(--cooldown-value-width);
+  text-align: center;
   font-weight: 650;
 }
 
