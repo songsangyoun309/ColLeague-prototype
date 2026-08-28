@@ -1,0 +1,24 @@
+{
+  "data_status": "sample_data",
+  "notice": "Invented UI demonstration values. Not observed games, recommendations, or live statistics.",
+  "player": "Pantheon",
+  "opponent": "Darius",
+  "lane": "top",
+  "win_rate": 50,
+  "games": 1000,
+  "rating": 1,
+  "runes": {
+    "keystone": "Conqueror",
+    "primary": ["Triumph", "Legend: Alacrity", "Last Stand"],
+    "secondary": ["Transcendence", "Scorch"],
+    "shards": ["Adaptive Force", "Adaptive Force", "Health"]
+  },
+  "spells": [{"id": 4, "name": "Flash"}, {"id": 14, "name": "Ignite"}],
+  "items": [
+    {"item_id": 1055, "name": "Doran's Blade + Health Potion", "stage": "starting"},
+    {"item_id": 3071, "name": "Black Cleaver", "stage": "first_completed"},
+    {"item_id": 3047, "name": "Plated Steelcaps", "stage": "boots"},
+    {"item_id": 3161, "name": "Spear of Shojin", "stage": "second_completed"}
+  ],
+  "bonus_items": [{"id": 3053, "name": "Sterak's Gage"}, {"id": 3026, "name": "Guardian Angel"}]
+}

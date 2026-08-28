@@ -1,0 +1,129 @@
+{
+  "version": "16.15.1",
+  "champions": {
+    "Pantheon": {
+      "P": {
+        "champion": "Pantheon",
+        "key": "P",
+        "id": "PantheonPassive",
+        "name": "Mortal Will",
+        "description": "Every few spells or attacks, Pantheon's next spell is empowered.",
+        "cooldown": "",
+        "cost": "",
+        "resource": null,
+        "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.15.1/img/passive/Pantheon_Passive.png",
+        "patch": "16.15.1"
+      },
+      "Q": {
+        "champion": "Pantheon",
+        "key": "Q",
+        "id": "PantheonQ",
+        "name": "Comet Spear",
+        "description": "Pantheon either thrusts his spear or throws his spear in the chosen direction.",
+        "cooldown": "11/10.25/9.5/8.75/8",
+        "cost": "25",
+        "resource": "{{ cost }} {{ abilityresourcename }}",
+        "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.15.1/img/spell/PantheonQ.png",
+        "patch": "16.15.1"
+      },
+      "W": {
+        "champion": "Pantheon",
+        "key": "W",
+        "id": "PantheonW",
+        "name": "Shield Vault",
+        "description": "Pantheon dashes to a target, damaging and stunning them.",
+        "cooldown": "13/12/11/10/9",
+        "cost": "55",
+        "resource": "{{ cost }} {{ abilityresourcename }}",
+        "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.15.1/img/spell/PantheonW.png",
+        "patch": "16.15.1"
+      },
+      "E": {
+        "champion": "Pantheon",
+        "key": "E",
+        "id": "PantheonE",
+        "name": "Aegis Assault",
+        "description": "Pantheon sets his shield, becoming invulnerable to damage from the front and striking repeatedly with his spear.",
+        "cooldown": "22/21/20/19/18",
+        "cost": "80",
+        "resource": "{{ cost }} {{ abilityresourcename }}",
+        "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.15.1/img/spell/PantheonE.png",
+        "patch": "16.15.1"
+      },
+      "R": {
+        "champion": "Pantheon",
+        "key": "R",
+        "id": "PantheonR",
+        "name": "Grand Starfall",
+        "description": "Pantheon composes himself and then leaps into the air, landing at a chosen location as a comet.",
+        "cooldown": "180/165/150",
+        "cost": "100",
+        "resource": "{{ cost }} {{ abilityresourcename }}",
+        "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.15.1/img/spell/PantheonR.png",
+        "patch": "16.15.1"
+      }
+    },
+    "Darius": {
+      "P": {
+        "champion": "Darius",
+        "key": "P",
+        "id": "DariusPassive",
+        "name": "Hemorrhage",
+        "description": "Darius' attacks and damaging abilities cause enemies to bleed for physical damage over 5 seconds, stacking up to 5 times. Darius enrages and gains massive Attack Damage when his target reaches max stacks.",
+        "cooldown": "",
+        "cost": "",
+        "resource": null,
+        "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.15.1/img/passive/Darius_Icon_Hemorrhage.png",
+        "patch": "16.15.1"
+      },
+      "Q": {
+        "champion": "Darius",
+        "key": "Q",
+        "id": "DariusCleave",
+        "name": "Decimate",
+        "description": "Darius winds up and swings his axe in a wide circle. Enemies struck by the blade take more damage than those struck by the handle. Darius heals based on enemy champions and large monsters hit by the blade.",
+        "cooldown": "9/8/7/6/5",
+        "cost": "25/30/35/40/45",
+        "resource": "{{ cost }} {{ abilityresourcename }}",
+        "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.15.1/img/spell/DariusCleave.png",
+        "patch": "16.15.1"
+      },
+      "W": {
+        "champion": "Darius",
+        "key": "W",
+        "id": "DariusNoxianTacticsONH",
+        "name": "Crippling Strike",
+        "description": "Darius's next attack strikes an enemy's crucial artery. As they bleed out, their Move Speed is slowed.",
+        "cooldown": "5",
+        "cost": "40",
+        "resource": "{{ cost }} {{ abilityresourcename }}",
+        "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.15.1/img/spell/DariusNoxianTacticsONH.png",
+        "patch": "16.15.1"
+      },
+      "E": {
+        "champion": "Darius",
+        "key": "E",
+        "id": "DariusAxeGrabCone",
+        "name": "Apprehend",
+        "description": "Darius hones his axe, passively causing his physical damage to ignore a percentage of his target's Armor. When activated, Darius sweeps up his enemies with his axe's hook and pulls them to him.",
+        "cooldown": "26/23.5/21/18.5/16",
+        "cost": "70/60/50/40/30",
+        "resource": "{{ cost }} {{ abilityresourcename }}",
+        "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.15.1/img/spell/DariusAxeGrabCone.png",
+        "patch": "16.15.1"
+      },
+      "R": {
+        "champion": "Darius",
+        "key": "R",
+        "id": "DariusExecute",
+        "name": "Noxian Guillotine",
+        "description": "Darius leaps to an enemy champion and strikes a lethal blow, dealing true damage. This damage is increased for each stack of Hemorrhage on the target. If Noxian Guillotine is a killing blow, its cooldown is refreshed for a brief duration.",
+        "cooldown": "120/100/80",
+        "cost": "100/100/0",
+        "resource": "{{ cost }} {{ abilityresourcename }}",
+        "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.15.1/img/spell/DariusExecute.png",
+        "patch": "16.15.1"
+      }
+    }
+  }
+}
