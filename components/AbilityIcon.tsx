@@ -42,7 +42,6 @@ export function AbilityIcon({
           {ability.cost && <span>Cost <b>{ability.cost}</b></span>}
           <span>Patch <b>{ability.patch}</b></span>
         </span>
-        <span className="ability-source">Official Riot Data Dragon tooltip</span>
       </span>
     </span>
   );

@@ -73,6 +73,14 @@ test("runtime files contain no original statistics/community integrations or col
   for (const dir of ["app", "components", "lib", "data"]) check(fileURLToPath(new URL(`../${dir}`, import.meta.url)));
 });
 
+test("ability tooltips retain useful details without redundant source captions", () => {
+  const component = read("components/AbilityIcon.tsx");
+  assert.doesNotMatch(component, /ability-source|Official Riot Data Dragon tooltip/);
+  for (const field of ["description", "cooldown", "cost", "patch"]) {
+    assert.ok(component.includes(`ability.${field}`));
+  }
+});
+
 test("served routes stay locked and expose a healthy standalone demo", { skip: !process.env.PROTOTYPE_URL }, async () => {
   const base = process.env.PROTOTYPE_URL;
   for (const route of ["/", "/pantheon/vs/darius", "/?lane=middle&champion=ahri&opponent=mel"]) {
