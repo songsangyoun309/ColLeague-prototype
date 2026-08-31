@@ -1,6 +1,6 @@
-# Coleague prototype
+# ColLeague prototype
 
-A standalone application demo of Coleague, locked to **Pantheon vs Darius, top lane**. It preserves the main site's visual design, paired ability comparison, and hover/focus tooltips. There are no champion or lane selectors.
+A standalone application demo of ColLeague, locked to **Pantheon vs Darius, top lane**. It preserves the main site's visual design, paired ability comparison, and hover/focus tooltips. There are no champion or lane selectors.
 
 ## What is real, and what is a placeholder?
 
@@ -9,7 +9,7 @@ A standalone application demo of Coleague, locked to **Pantheon vs Darius, top l
 - **Official static reference:** Pantheon and Darius ability descriptions, icons, and base cooldowns use a bundled Riot Data Dragon 16.15.1 snapshot. This is not live gameplay data; ability haste, resets, and recasts are not applied. Icons load from Riot's CDN. Fonts are bundled locally with their licenses.
 - **Replay placeholder:** no third-party video is embedded in this demo.
 
-No live statistics integration, community collector, background refresh job, original research database, API key, account connection, or database service is included. This is a limited prototype, not a representation that the full Coleague product has been approved by any provider. Any future integration needs the relevant provider's permission and applicable policy compliance.
+No live statistics integration, community collector, background refresh job, original research database, API key, account connection, or database service is included. The repository contains no Reddit posts or comments and no LoLalytics statistics or exports; its advice and build fixtures are invented demo content. This is a limited prototype, not a representation that the full ColLeague product has been approved by any provider. Any future integration needs the relevant provider's permission and applicable policy compliance.
 
 ## Run locally
 
@@ -36,4 +36,4 @@ Create a **new service** connected to this repository. Use the repository root, 
 
 Describe this honestly as a fixed-matchup prototype with sample statistics and placeholder advice. It does not demonstrate an approved data connection. Riot's [developer policies](https://developer.riotgames.com/policies/general) and [Data Dragon documentation](https://developer.riotgames.com/docs/lol#data-dragon) apply to the official assets. Registration, review, and applicable permissions remain the owner's responsibility.
 
-Based on Coleague UI commit `acd21d7`, with the shared-width cooldown alignment from `76bbb12`. This repository has an independent history and does not include the main app's database or collectors.
+Based on ColLeague UI commit `acd21d7`, with the shared-width cooldown alignment from `76bbb12`. This repository has an independent history and does not include the main app's database or collectors.

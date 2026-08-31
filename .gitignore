@@ -1,7 +1,14 @@
 node_modules/
 .next/
 out/
+.vercel/
+.railway/
 *.tsbuildinfo
 .env*
 !.env.example
 *.log
+.npmrc
+*.key
+*.pem
+*.p12
+*.pfx

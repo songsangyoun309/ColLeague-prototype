@@ -1,4 +1,4 @@
-# Coleague prototype
+# ColLeague prototype
 
 - This is a separate, fixed Pantheon vs Darius top-lane application demo. Do not modify the main repository when working here.
 - Keep all invented statistics clearly labeled as sample data. Keep advice labeled as fictional sample content; do not describe it as researched, manual curation, or community consensus. Demo citations must point to local fictional-source previews, not fabricated external discussions.

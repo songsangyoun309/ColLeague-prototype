@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import sampleAdvice from "@/data/sample-advice.json";
 
-export const metadata: Metadata = { title: "Coleague · Demo source preview" };
+export const metadata: Metadata = { title: "ColLeague · Demo source preview" };
 
 export default function DemoSourcesPage() {
   return (
