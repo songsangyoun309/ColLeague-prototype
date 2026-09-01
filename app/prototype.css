@@ -24,6 +24,13 @@
 .prototype-source-card blockquote { margin: 12px 0 20px; padding-left: 16px; border-left: 2px solid var(--line); font-size: 14px; line-height: 1.8; }
 .prototype-source-page a { color: var(--gold-bright); font-size: 12px; }
 .prototype-source-page a:hover { text-decoration: underline; }
+.prototype-policy-page { min-height: calc(100vh - 70px); padding-bottom: 72px; }
+.prototype-policy-page > h1 { margin-bottom: 6px; }
+.prototype-policy-page section { padding: 4px 0 20px; border-bottom: 1px solid var(--line-soft); }
+.prototype-policy-page section:last-child { border-bottom: 0; }
+.prototype-policy-page section > h2 { margin-bottom: 10px; }
+.prototype-policy-page p { max-width: 760px; color: #c0d0da; font-size: 14px; line-height: 1.75; }
+.prototype-policy-page .prototype-policy-updated { margin: 0 0 28px; color: var(--faint); font-size: 12px; }
 .dashboard-advice[id] { scroll-margin-top: 88px; }
 .prototype-replay { padding: 20px; color: var(--faint); font-size: 13px; }
 .dashboard-runes > .table-note { margin: 0; padding: 14px 20px; border-top: 1px solid var(--line-soft); text-align: center; }

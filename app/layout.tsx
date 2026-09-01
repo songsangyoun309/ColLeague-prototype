@@ -28,7 +28,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         {children}
         <footer className="site-footer">
           <span className="footer-brand">Co<span className="brand-accent">league</span></span>
-          <a href="https://developer.riotgames.com/policies/general" target="_blank" rel="noreferrer">Riot developer policies</a>
+          <nav aria-label="Legal and provider information">
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
+            <a href="https://developer.riotgames.com/policies/general" target="_blank" rel="noreferrer">Riot developer policies</a>
+          </nav>
           <p className="legal">ColLeague isn&apos;t endorsed by Riot Games and doesn&apos;t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
         </footer>
       </body>

@@ -95,6 +95,15 @@ test("ability tooltips retain useful details without redundant source captions",
   assert.doesNotMatch(css, /\.community-consensus \.advice-prose (?:strong|b)\s*[,\{]/);
 });
 
+test("the public prototype links its privacy policy and terms", () => {
+  const layout = read("app/layout.tsx");
+  assert.match(layout, /href="\/privacy"/);
+  assert.match(layout, /href="\/terms"/);
+  assert.doesNotMatch(read("app/globals.css"), /\.study-dashboard-page \+ \.site-footer\s*\{\s*display:\s*none/);
+  assert.match(read("app/privacy/page.tsx"), /no visitor database/i);
+  assert.match(read("app/terms/page.tsx"), /sample content/i);
+});
+
 test("items use short leading stages and rune paths keep paired icon-label tracks", () => {
   const component = read("components/ItemTable.tsx");
   for (const label of ["Starter", "Item 1", "Boots", "Item 2"]) assert.ok(component.includes(label));
