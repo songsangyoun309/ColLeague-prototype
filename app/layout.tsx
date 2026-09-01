@@ -21,13 +21,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <header className="site-header">
           <Link href="/" className="brand" aria-label="ColLeague prototype home">
             <span className="brand-mark" aria-hidden="true">C</span>
-            <span>Co<span className="brand-accent">league</span></span>
+            <span>Col<span className="brand-accent">League</span></span>
           </Link>
           <span className="prototype-badge">Application prototype</span>
         </header>
         {children}
         <footer className="site-footer">
-          <span className="footer-brand">Co<span className="brand-accent">league</span></span>
+          <span className="footer-brand">Col<span className="brand-accent">League</span></span>
           <nav aria-label="Legal and provider information">
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>

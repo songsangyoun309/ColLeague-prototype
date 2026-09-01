@@ -104,6 +104,12 @@ test("the public prototype links its privacy policy and terms", () => {
   assert.match(read("app/terms/page.tsx"), /sample content/i);
 });
 
+test("the prototype uses the official ColLeague name", () => {
+  const layout = read("app/layout.tsx");
+  assert.match(layout, />Col<span className="brand-accent">League<\/span>/);
+  assert.equal(JSON.parse(read("package.json")).name, "colleague-prototype");
+});
+
 test("items use short leading stages and rune paths keep paired icon-label tracks", () => {
   const component = read("components/ItemTable.tsx");
   for (const label of ["Starter", "Item 1", "Boots", "Item 2"]) assert.ok(component.includes(label));

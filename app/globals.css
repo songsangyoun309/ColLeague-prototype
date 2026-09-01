@@ -60,23 +60,6 @@ img { display: block; }
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   font-family: var(--font-brand), Georgia, serif; font-size: 24px; font-weight: 700; line-height: 1; letter-spacing: 0;
 }
-.quit-lolective {
-  display: inline-flex;
-  min-height: 34px;
-  align-items: center;
-  gap: 7px;
-  padding: 0 11px;
-  border: 1px solid #3b5969;
-  border-radius: 5px;
-  background: #0b2534;
-  color: #b5c5cc;
-  cursor: pointer;
-  font-size: 11px;
-  font-weight: 650;
-}
-.quit-lolective:hover { border-color: #a64f55; color: #ffc0c0; background: #3b1b21; }
-.quit-lolective:disabled { cursor: wait; opacity: .65; }
-.quit-lolective svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
 .quit-dialog-backdrop {
   position: fixed;
   z-index: 1000;
@@ -483,7 +466,7 @@ h1 em { color: var(--gold); font-weight: 400; }
   .site-footer .legal { grid-column: 1; }
 }
 
-/* LoLective client skin */
+/* ColLeague client skin */
 .site-header {
   background: #04101a;
   border-bottom-color: #28485a;
@@ -1871,16 +1854,6 @@ h1 em { color: var(--gold); font-weight: 400; }
 
   .site-header {
     padding-inline: 14px;
-  }
-
-  .quit-lolective {
-    width: 34px;
-    justify-content: center;
-    padding: 0;
-  }
-
-  .quit-lolective span {
-    display: none;
   }
 
   .site-header nav {
